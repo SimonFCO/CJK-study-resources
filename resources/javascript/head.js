@@ -201,7 +201,7 @@
       // open settings popup
       GenkiModal.open({
         title : '<span class="en">Settings Manager</span><span class="ja">ウェブサイトの設定</span>',
-        content : '<p><span class="en">You can manage your settings for Tobira Study Resources in this window.<br>※ Please note that all data is saved locally to the browser, so clearing your browser\'s cache will reset your settings.</span><span class="ja">ここでTobira Study Resourcesの設定が変更できます。<br>※ウェブサイトの設定はブラウザーで保存していますのでキャッシュをクリアすると失います。注意してください。</span></p>'+
+        content : '<p><span class="en">You can manage your settings for CJK Study Resources in this window.<br>※ Please note that all data is saved locally to the browser, so clearing your browser\'s cache will reset your settings.</span><span class="ja">ここでCJK Study Resourcesの設定が変更できます。<br>※ウェブサイトの設定はブラウザーで保存していますのでキャッシュをクリアすると失います。注意してください。</span></p>'+
         
         '<div class="section-title"><span class="en">Display</span><span class="ja">表示</span></div>'+
         '<ul class="genki-settings-list">'+
@@ -463,7 +463,7 @@
           reader = new FileReader();
       
       reader.onload = function (e) {
-        if (/"3rd"\:|"2nd"\:/.test(e.target.result)) return alert(GenkiLang == 'ja' ? 'このデータはGenki Study Resources専用です。Tobira Study Resourcesのデータを選択してください。' : 'This exercise data is only for use with Genki Study Resources. Please select your Tobira Exercise Data file to load your scores.');
+        if (/"3rd"\:|"2nd"\:/.test(e.target.result)) return alert(GenkiLang == 'ja' ? 'このデータはGenki Study Resources専用です。CJK Study Resourcesのデータを選択してください。' : 'This exercise data is only for use with Genki Study Resources. Please select your Tobira Exercise Data file to load your scores.');
         
         if (/"\:\d+/.test(e.target.result)) {
           localStorage.TobiraResults = e.target.result;
@@ -1104,9 +1104,9 @@
   
   
   // # LIMITED MODE WARNING #
-  // If cookies are blocked, Tobira Study Resources will run in limited mode. Settings are not remembered in this mode and certain features, such as dark mode, are unavailable.
+  // If cookies are blocked, CJK Study Resources will run in limited mode. Settings are not remembered in this mode and certain features, such as dark mode, are unavailable.
   if (!navigator.cookieEnabled) {
-    console.warn('Cookies are not available either due to host or browser settings. Tobira Study Resources will function in limited mode where settings are not remembered and certain features are unavailable. This issue can commonly be resolved by enabling third-party cookies. Please see the following page for help.\nhttps://sethclydesdale.github.io/tobira-study-resources/help/stuck-loading/\n\nIf the issue still occurs after enabling third-party cookies, please contact the developer for further assistance.\nhttps://github.com/SethClydesdale/tobira-study-resources/issues');
+    console.warn('Cookies are not available either due to host or browser settings. CJK Study Resources will function in limited mode where settings are not remembered and certain features are unavailable. This issue can commonly be resolved by enabling third-party cookies. Please see the following page for help.\nhttps://sethclydesdale.github.io/tobira-study-resources/help/stuck-loading/\n\nIf the issue still occurs after enabling third-party cookies, please contact the developer for further assistance.\nhttps://github.com/SethClydesdale/tobira-study-resources/issues');
   }
   
   

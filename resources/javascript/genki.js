@@ -250,7 +250,7 @@
           '<div class="center">'+
             (/\/vocabulary-index\/|\/custom-vocab\//.test(window.location) ? '' : '<div>'+
               '<b><span class="en">Current Exercise</span><span class="ja">今の練習</span></b><br>'+
-              document.title.replace(/ \| Tobira Study Resources.*$/, '')+
+              document.title.replace(/ \| CJK Study Resources.*$/, '')+
             '</div><br>')+
             
             '<div>'+
@@ -1440,7 +1440,7 @@
                   '<div>'+
                     '<div class="donate-box clear">'+
                       '<div class="donate-icon"><i class="fa">&#xf004;</i></div>'+
-                      '<div class="donate-text">If Tobira Study Resources has helped you with your studies, please also consider <a href="' + getPaths() + 'donate/' + Genki.local + '" target="_blank">making a donation <i class="fa">&#xf08e;</i></a> if you can, to help support the continued development and maintenance of these resources. Your support is greatly appreciated!</div>'+
+                      '<div class="donate-text">If CJK Study Resources has helped you with your studies, please also consider <a href="' + getPaths() + 'donate/' + Genki.local + '" target="_blank">making a donation <i class="fa">&#xf08e;</i></a> if you can, to help support the continued development and maintenance of these resources. Your support is greatly appreciated!</div>'+
                     '</div>'+
                   '</div>'+
                 '</div>',
@@ -1670,7 +1670,7 @@
               
               // notify the user that break time has ended
               if (!Genki.local && Genki.canNotify && Notification.permission == 'granted') {
-                var notif = new Notification(document.title.replace(/ \| Tobira Study Resources.*$/, ''), {
+                var notif = new Notification(document.title.replace(/ \| CJK Study Resources.*$/, ''), {
                   body : GenkiLang == 'ja' ? '休憩が終了しました！' : 'Break time is up!',
                   icon : document.querySelector('meta[property="og:image"]').content,
                   tag : 'breakTime-' + Genki.active.index
