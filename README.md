@@ -11,6 +11,8 @@ CJK Study Resources is a website that offers a vast collection of exercises for 
 - [Special Thanks](#special-thanks)
 - [Donate](#donate)
 
+### Using the Online Version
+If you dont want to download it then you can just press this link https://simonfco.github.io/CJK-study-resources/ and use it online instead
 
 ### Using the Offline Version
 If you're using the offline version you'll have to unzip the files. Once you've done that, you can access all the study resources by opening any of the **index.html** files in the browser of your choice. It should have the same experience as the online version, however, whenever new exercises/lessons are added they will not be available; you'll have to download the latest version of the repository to get them.
