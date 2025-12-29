@@ -437,6 +437,140 @@ a#fork-me {
         background: #fff
     }
 
+/* -------------------------------------------------
+   Button – small, centered **over** the three lines
+   -------------------- ----------------------------- */
+   @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.CJK-Button {
+    position: relative;               /* positioned relative to nearest positioned ancestor */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateY(125px);
+    z-index: 10;                       /* stay on top of the strips */
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Fixed size – keep if you need an exact button size */
+    width: 210px;
+    height: 67px;
+    padding: 0 10px;
+
+    font-size: 23px;
+    font-family: 'メイリオ', Meiryo, Osaka,
+                 "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+                 Arial, sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background: #BE132D;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+
+    
+    opacity: 0;                     /* start hidden */
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.3s;          /* start after the lines finish */
+}
+
+/* hover / focus / active */
+.CJK-Button:hover,
+.CJK-Button:focus {
+    background: #db3951;
+}
+
+.CJK-Button:active {
+    background: #a7192e;
+
+}
+
+/* optional Font Awesome icon */
+.CJK-Button .fa {
+    margin-right: 4px;
+    font-size: 14px;
+}
+
+/* ---------- container ---------- */
+
+#CJK-Lesson {
+    height: 1000px;
+    display: flex;
+    justify-content: center;   /* three strips stay together */
+    align-items: center;       /* vertical centering of the strips */
+    position: relative;        /* <-- important for the overlay */
+}
+
+@keyframes slideFromRight {
+    0%   { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateX(0);    opacity: 1; }
+}
+
+/* ---------- each vertical strip ---------- */
+#CJK-Lesson .line {
+    width: 350px;               /* thickness of each strip */
+    height: 750px;              /* length of each strip */
+    margin: 0 0px;
+    border: 0px solid #cc3a50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f3edee;        /* default colour – overridden per strip */
+    opacity: 0;
+    animation: slideFromRight 1s ease-out forwards;
+}
+
+
+/* colour overrides */
+#CJK-Lesson .line:nth-child(1) { background: #BE132D; }   /* red */
+#CJK-Lesson .line:nth-child(2) { background: #569cf8; }   /* blue */
+#CJK-Lesson .line:nth-child(3) { background: #5acc80; }   /* green */
+
+/* ---------- top text block ---------- */
+#CJK-Lesson .top-block {
+    margin-top: 50px;          /* distance from the top edge */
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* ---------- smaller sub‑block ---------- */
+#CJK-Lesson .sub-block {
+    margin-top: -20px;
+    font-size: 1.5rem;
+    color: #e4e4e4;
+    opacity: 0.85;
+}
+
+/* ---------- divider line ---------- */
+#CJK-Lesson .divider {
+    width: 80%;                /* shorter than the strip width */
+    margin: 12px 0;
+    border: none;
+    border-top: 1px solid #fff;
+    opacity: 0.6;
+}
+
+/* ---------- bottom list of 5 items ---------- */
+#CJK-Lesson .bottom-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;                  /* space between items */
+}
+
+/* each item */
+#CJK-Lesson .bottom-list .item {
+    font-size: 2rem;
+    color: #fff;
+    opacity: 2;
+}
+
 #announcement {
     color: #fff;
     background: #BE132D;
