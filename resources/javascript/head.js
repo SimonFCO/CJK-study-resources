@@ -463,7 +463,7 @@
           reader = new FileReader();
       
       reader.onload = function (e) {
-        if (/"3rd"\:|"2nd"\:/.test(e.target.result)) return alert(GenkiLang == 'ja' ? 'このデータはGenki Study Resources専用です。CJK Study Resourcesのデータを選択してください。' : 'This exercise data is only for use with Genki Study Resources. Please select your Tobira Exercise Data file to load your scores.');
+        if (/"3rd"\:|"2nd"\:/.test(e.target.result)) return alert(GenkiLang == 'ja' ? 'このデータはCJK Study Resources専用です。CJK Study Resourcesのデータを選択してください。' : 'This exercise data is only for use with CJK Study Resources. Please select your Tobira Exercise Data file to load your scores.');
         
         if (/"\:\d+/.test(e.target.result)) {
           localStorage.TobiraResults = e.target.result;
