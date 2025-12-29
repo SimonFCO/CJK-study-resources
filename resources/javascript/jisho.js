@@ -7,7 +7,7 @@
 /*{
    ja : "JAPANESE_DEFINITION|FURIGANA(OPTIONAL)", // | should be omitted if no furigana
    en : "ENGLISH_DEFINITION",
-    v : "TYPE(OPTIONAL)", // can be omitted if no type (originally only "verb type" in Genki Study Resources)
+    v : "TYPE(OPTIONAL)", // can be omitted if no type (originally only "verb type" in CJK Study Resources)
     l : "LESSON"
 }*/
 

@@ -39,7 +39,7 @@
     markedItem : null,
     
     // [DISABLED] tells us what edition of Genki the student is using so we can change the URLs accordingly
-    // remnant from Genki Study Resources, but I'll leave this functionality just in case a new edition of Tobira comes out and I feel like adapting the resources
+    // remnant from CJK Study Resources, but I'll leave this functionality just in case a new edition of Tobira comes out and I feel like adapting the resources
     ed : 'lessons' /*+ (/lessons-3rd/.test(window.location.pathname) ? '-3rd' : '')*/,
     
     // tells us if being used on a local file system so we can append index.html to URLs
@@ -2246,7 +2246,7 @@
 
           '<div id="related" class="indent-block">'+
             '<h3><span class="en">Related Projects</span><span class="ja">関連のプロジェクト</span></h3>'+
-            '<a href="https://sethclydesdale.github.io/genki-study-resources/" title="Genki Study Resources"><img src="' + getPaths() + 'resources/images/genki-img.png" alt="Genki Study Resources"></a>'+
+            '<a href="https://sethclydesdale.github.io/genki-study-resources/" title="CJK Study Resources"><img src="' + getPaths() + 'resources/images/genki-img.png" alt="CJK Study Resources"></a>'+
             '<a href="https://sethclydesdale.github.io/quartet-study-resources/" title="Quartet Study Resources"><img src="' + getPaths() + 'resources/images/quartet-img.png" alt="Quartet Study Resources"></a>'+
             '<a href="https://sethclydesdale.github.io/colloquial-kansai-dictionary/" title="Colloquial Kansai Japanese"><img src="' + getPaths() + 'resources/images/kansai-img.png" alt="Colloquial Kansai Japanese"></a>'+
           '</div>';
