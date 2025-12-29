@@ -18,7 +18,7 @@ If you dont want to download it then you can just press this link https://simonf
 If you're using the offline version you'll have to unzip the files. Once you've done that, you can access all the study resources by opening any of the **index.html** files in the browser of your choice. It should have the same experience as the online version, however, whenever new exercises/lessons are added they will not be available; you'll have to download the latest version of the repository to get them.
 
 ### Keyboard Shortcuts
-Tobira Study Resources supports a few keyboard shortcuts which you can use to make things easier. If you've used Genki Study Resources, you should already be familiar with these shortcuts. These shortcuts are typically used via <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>KEY</kbd> for Windows and <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>KEY</kbd> for Mac.
+CJK Study Resources supports a few keyboard shortcuts which you can use to make things easier. If you've used Genki Study Resources, you should already be familiar with these shortcuts. These shortcuts are typically used via <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>KEY</kbd> for Windows and <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>KEY</kbd> for Mac.
 
 #### Global
 Shortcuts that can be used anywhere.

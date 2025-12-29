@@ -1,5 +1,5 @@
 # About genkico-lg.ico
-This file isn't used on the website. It can however, be used as a folder or shortcut icon if you're using Tobira Study Resources offline. Follow the steps below to change the icon of a shortcut or folder.
+This file isn't used on the website. It can however, be used as a folder or shortcut icon if you're using CJK Study Resources offline. Follow the steps below to change the icon of a shortcut or folder.
 
 1. Right click the folder/shortcut and choose "Properties."
 2. Follow the steps below depending on if you're changing the icon for a folder or shortcut.
