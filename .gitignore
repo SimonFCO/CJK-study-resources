@@ -1,7 +1,24 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+﻿# --- Visual Studio & .NET Ignored Files ---
+.vs/
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
 
-/.vs
-/.gitignore
-/.gitignore
+# Ignore the specific files you found
+workspaceFileList.bin
+*.wsuo
+documentlayout.json
+documentlayout.backup.json
+slnx.sqlite
+VSWorkspaceState.json
+
+# Build results (Debug/Release folders)
+[Bb]in/
+[Oo]bj/
+/.vs/CJK-study-resources/v18/workspaceFileList.bin
+/.vs/CJK-study-resources.slnx/v18/.wsuo
+/.vs/CJK-study-resources.slnx/v18/DocumentLayout.backup.json
+/.vs/CJK-study-resources.slnx/v18/DocumentLayout.json
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
