@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#" class="lang-en">
+<head>
+    <meta charset="UTF-8">
+    <title>CJK : 1 | CJK Study Resources</title>
+    <meta name="title" content="CJK : 1 | CJK Study Resources">
+    <meta name="twitter:title" content="CJK : 1 | CJK Study Resources">
+    <meta property="og:title" content="CJK : 1 | CJK Study Resources">
+    <meta name="description" content="Complete the following problems.">
+    <meta property="og:description" content="Complete the following problems.">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../resources/images/CJK-thumb.png">
+
+    <link rel="stylesheet" href="../../../resources/css/stylesheet.min.css">
+    <script src="../../../resources/javascript/head.min.js"></script>
+    <script src="../../../resources/javascript/ga.js" async></script>
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="../../../" id="home-link">CJK Study Resources</a></h1>
+        <a id="fork-me" href="https://github.com/SimonFCO/CJK-study-resources">Fork Me</a>
+    </header>
+
+    <div id="announcement">
+        <div id="announce-inner">
+            <h3><i class="fa">&#xf0a1;</i> News and Info</h3>
+            <div id="announce-list">
+                <div id="announcement-controls" style="display:none;">
+                    <button class="button announce-controls button-left" onclick="GenkiAnn.next(-1, true);"><i class="fa">&#xf060;</i></button>
+                    <button class="button announce-controls button-right" onclick="GenkiAnn.next(+1, true);"><i class="fa">&#xf061;</i></button>
+                </div>
+                <noscript><div class="announcement">Please enable JavaScript to get the latest news and info.</div></noscript>
+            </div>
+        </div>
+    </div>
+
+        <a href="#" class="CJK-Button" id="swapBtn">
+        <i class="fa fa-exchange"></i>next word
+        </a>
+        
+   <div id="CJK-Lesson">
+    
+    <!-- strip 1 -->
+    <div class="line" id="line-1">
+        <div class="top-block">China</div>
+        <div class="sub-block">北京</div>
+
+        <hr class="divider">
+
+        <div class="bottom-list">
+            <div class="item">北京</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+
+    <!-- strip 2 -->
+    <div class="line" id="line-2">
+        <div class="top-block">Japan</div>
+        <div class="sub-block">東京</div>
+
+        <hr class="divider">
+
+        <div class="bottom-list">
+            <div class="item">東京</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+
+    <!-- strip 3 -->
+    <div class="line" id="line-3">
+        <div class="top-block">Korea</div>
+        <div class="sub-block">서울</div>
+
+        <hr class="divider">
+
+        <div class="bottom-list">
+            <div class="item">서울</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+        <a href="../../../lessons/CJK/CJK-2/index.html" class="button">Next</a>
+    </div>
+
+    <footer class="clear">
+        <ul class="footer-left">
+            <li><a href="../../../" id="footer-home">Home</a></li>
+            <li><a href="../../../privacy/">Privacy</a></li>
+            <li><a href="../../../report/">Report a Bug</a></li>
+            <li><a href="../../../help/">Help</a></li>
+            <li><a href="../../../donate/">Donate</a></li>
+        </ul>
+
+        <ul class="footer-right">
+            <li>Forked from <a href="https://github.com/SethClydesdale">Seth Clydesdale</a> and the <a href="https://github.com/SethClydesdale/tobira-study-resources/graphs/contributors">GitHub Community</a></li>
+        </ul>
+    </footer>
+
+    <script src="../../../resources/javascript/dragula.min.js"></script>
+    <script src="../../../resources/javascript/easytimer.min.js"></script>
+    <script src="../../../resources/javascript/exercises/tobira.min.js"></script>
+    <script src="../../../resources/javascript/genki.min.js"></script>
+    <script src="../../../resources/javascript/all.min.js"></script>
+
+<script>
+/* -------------------------------------------------
+   Data – each set contains three objects (one per column)
+   ------------------------------------------------- */
+const wordSets = [
+    [
+            {top: 'China',   sub: '中国', list: ['Chinese words','茶','電 / 电','車 / 车','電話 / 电话','銀行 / 银行','大學 / 大学','電影 / 电影','音樂 / 音乐','醫學 / 医学', "文化"]},
+            {top: 'Japan',   sub: '日本', list: ['Japanese words','茶','電','車','電話','銀行','大学','映画','音楽','医学', "文化"]},
+            {top: 'Korea',   sub: '한국', list: ['Korean words','차 / 茶','電 / 전','車 / 차','電話 / 전화','銀行 / 은행','大學 / 대학','映畫 / 영화','音樂 / 음악','醫學 / 의학', "文化 / 문화"]}
+    ],
+
+    [
+        {top: '茶',   sub: 'Tea', list: ['chá']},
+        {top: '茶',   sub: 'Tea', list: ['ちゃ (cha)',"________________", 'サ (sa): 茶道 (sadō).',"Tea Ceremony"]},
+        {top: '차 / 茶',   sub: 'Tea', list: ['차 (cha)',"________________",'다 (da): 다방 dabang',"Tearoom"]}
+    ],
+
+    [
+        {top: '電 / 电', sub: 'Electricity', list: ['diàn']},
+        {top: '電', sub: 'Electricity', list: ['でん (den)']},
+        {top: '電 / 전', sub: 'Electricity', list: ['전 (jeon)']}
+    ],
+
+    [
+        {top: '車 / 车', sub: 'Vehicle', list: ['chē']},
+        {top: '車', sub: 'Vehicle', list: ['くるま (kuruma)',"________________","シャ (sha):", "電車 (densha)","Train"]},
+        {top: '車 / 차', sub: 'Vehicle', list: ['차 (cha)',"________________", "거 (geo):", "자전거 jajeongeo","Bicycle"]}
+    ],
+
+    [
+        {top: '電話 / 电话', sub: 'Telephone', list: ['diànhuà']},
+        {top: '電話', sub: 'Telephone', list: ['でんわ (denwa)']},
+        {top: '電話 / 전화', sub: 'Telephone', list: ['전화 (jeonhwa)']}
+    ],
+
+    [
+        {top: '銀行 / 银行', sub: 'Bank', list: ['yínháng']},
+        {top: '銀行', sub: 'Bank', list: ['ぎんこう (ginkō)']},
+        {top: '銀行 / 은행', sub: 'Bank', list: ['은행 (eunhaeng)']}
+    ],
+
+    [
+        {top: '大學 / 大学', sub: 'University', list: ['dàxué']},
+        {top: '大学', sub: 'University', list: ['だいがく (daigaku)']},
+        {top: '大學 / 대학', sub: 'University', list: ['대학 (daehak)']}
+    ],
+
+    [
+        {top: '電影 / 电影', sub: 'Movie', list: ['diànyǐng']},
+        {top: '映画', sub: 'Movie', list: ['えいが (eiga)']},
+        {top: '映畫 / 영화', sub: 'Movie', list: ['영화 (yeonghwa)']}
+    ],
+
+    [
+        {top: '音樂 / 音乐', sub: 'Music', list: ['yīnyuè']},
+        {top: '音楽', sub: 'Music', list: ['おんがく (ongaku)']},
+        {top: '音樂 / 음악', sub: 'Music', list: ['음악 (eumak)']}
+    ],
+
+    [
+        {top: '醫學 / 医学', sub: 'Medicine', list: ['yīxué']},
+        {top: '医学', sub: 'Medicine', list: ['いがく (igaku)']},
+        {top: '醫學 / 의학', sub: 'Medicine', list: ['의학 (uihak)']}
+    ],
+
+    [
+        {top: '文化', sub: 'Culture', list: ['wénhuà']},
+        {top: '文化', sub: 'Culture', list: ['ぶんか (bunka)']},
+        {top: '文化 / 문화', sub: 'Culture', list: ['문화 (munhwa)']}
+    ]
+];
+
+let currentSet = 0;   // start with set 0
+
+/* -------------------------------------------------
+   Helper – completely rebuild a single column
+   ------------------------------------------------- */
+function buildColumn(lineEl, data) {
+    // clear everything that might be inside the line
+    lineEl.innerHTML = '';
+
+    // top block
+    const top = document.createElement('div');
+    top.className = 'top-block';
+    top.textContent = data.top;
+    lineEl.appendChild(top);
+
+    // sub block
+    const sub = document.createElement('div');
+    sub.className = 'sub-block';
+    sub.textContent = data.sub;
+    lineEl.appendChild(sub);
+
+    // divider line
+    const hr = document.createElement('hr');
+    hr.className = 'divider';
+    lineEl.appendChild(hr);
+
+    // bottom list (5 items)
+    const listDiv = document.createElement('div');
+    listDiv.className = 'bottom-list';
+    data.list.forEach(txt => {
+        const item = document.createElement('div');
+        item.className = 'item';
+        item.textContent = txt;
+        listDiv.appendChild(item);
+    });
+    lineEl.appendChild(listDiv);
+}
+
+/* -------------------------------------------------
+   Apply a whole set (re‑build all three columns)
+   ------------------------------------------------- */
+function applySet(idx) {
+    const set = wordSets[idx];
+    buildColumn(document.getElementById('line-1'), set[0]);
+    buildColumn(document.getElementById('line-2'), set[1]);
+    buildColumn(document.getElementById('line-3'), set[2]);
+}
+
+/* -------------------------------------------------
+   Initial render
+   ------------------------------------------------- */
+applySet(currentSet);
+
+/* -------------------------------------------------
+   Button – cycle through the sets
+   ------------------------------------------------- */
+document.getElementById('swapBtn').addEventListener('click', e => {
+    e.preventDefault();                     // stop the dummy link
+    currentSet = (currentSet + 1) % wordSets.length;
+    applySet(currentSet);
+});
+</script>
+</body>
+</html>
